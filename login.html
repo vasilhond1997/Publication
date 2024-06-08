@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/milligram.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="layouts/topbar.js"></script>
+</head>
+
+<body>
+    <div class="outer">
+        <topbar-component></topbar-component>
+        <div class="row">
+            <div class=" "></div>
+            <div class="column column-40">
+                <div class="center-div">
+                    <h1>Login Form</h1>
+                    <form style="width:400px;" action="login.php" method="post" >
+                        <fieldset>
+                            <label for="usernameField">Username</label>
+                            <input type="text" placeholder="george21" id="usernameField" name="usernameField">
+                            <label for="passwordField">Password</label>
+                            <input type="password" placeholder="1234" id="passwordField" name="passwordField">
+                            <br><br>
+                            <input class="button-primary" type="submit" value="Send">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>s
+</body>
+
+</html>

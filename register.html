@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/milligram.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="layouts/topbar.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <div class="outer">
+        <topbar-component></topbar-component>
+        <div class="row">
+            <div class=" "></div>
+            <div class="column column-40">
+                <div class="center-div">
+                    <h1>Registration Form</h1>
+                    <form style="width:400px;" action="insert.php" method="post" onSubmit="return checkPassword(this)">
+                        <fieldset>
+                            <label for="usernameField">Username*</label>
+                            <input type="text" placeholder="george21" name="usernameField" id="usernameField" required>
+                            <label for="emailField">Email*</label>
+                            <input type="text" placeholder="myemail@example.com" name="emailField" id="emailField" required>
+                            <label for="passwordField">Password*</label>
+                            <input type="password" placeholder="1234" name="passwordField" id="passwordField" required>
+                            <label for="passwordField2">Confirm Password*</label>
+                            <input type="password" placeholder="1234" id="passwordField2" required>
+                            <label for="nameField">Name*</label>
+                            <input type="text" placeholder="George" name="nameField" id="nameField" required>
+                            <label for="surnameField">Surname*</label>
+                            <input type="text" placeholder="Papadopoulos" name="surnameField" id="surnameField" required>
+                            <label for="roleField">Role</label>
+                            <select name="roleField" id="roleField">
+                                <option value="publisher">Publisher</option>
+                                <option value="depheader">Department Header</option>
+                                <option value="admin">Administrator</option>
+                            </select>
+                            <label for="departmentField">Department*</label>
+                            <input type="text" placeholder="" name="departmentField" id="departmentField" required>
+                            <br><br>
+                            <input class="button-primary" type="submit" value="Send">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function checkPassword(form) {
+        password1 = form.passwordField.value;
+        password2 = form.passwordField2.value;
+
+        // If password not entered 
+        if (password1 == '')
+            alert("Please enter Password");
+
+        // If confirm password not entered 
+        else if (password2 == '')
+            alert("Please enter confirm password");
+
+        // If Not same return False.     
+        else if (password1 != password2) {
+            alert("\nPassword did not match: Please try again...")
+            return false;
+        }
+
+        // If same return True. 
+        else {
+            alert("Password Match: Welcome!")
+            return true;
+        }
+    }
+
+</script>
+
+</html>
